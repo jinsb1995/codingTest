@@ -1,0 +1,23 @@
+package day_20210917;
+
+public class Maraton {
+	
+	
+	public static void main(String[] args) {
+		String[] participant = {"leo", "kiki", "eden"};
+		String[] completion = {"eden", "kiki"};
+		
+		solution(participant, completion);
+		
+	}
+	
+	static String solution(String[] participant, String[] completion) {
+		String result = "";
+		
+		
+		
+		
+		
+		return result;
+	}
+}

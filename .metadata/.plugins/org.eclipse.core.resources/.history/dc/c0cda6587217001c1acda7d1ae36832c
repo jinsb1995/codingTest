@@ -1,0 +1,19 @@
+package day_20210917;
+
+public class Average {
+	
+	
+	// 정수를 담고 있는 배열 arr의 평균 값을 return 하는 함수를 만들어라
+	
+	public static void main(String[] args) {
+		
+		int[] arr = {1,2,3,4};
+		solution(arr);
+	}
+	
+	
+	
+	
+	
+	
+}
