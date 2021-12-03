@@ -1,4 +1,4 @@
-package day_20210917;
+package day1;
 
 import java.util.ArrayList;
 import java.util.Arrays;

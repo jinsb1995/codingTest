@@ -1,4 +1,4 @@
-package day_20210917;
+package day1;
 
 public class MiddleNum {
 
