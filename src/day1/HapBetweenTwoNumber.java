@@ -4,9 +4,8 @@ public class HapBetweenTwoNumber {
 
 	
 	public static void main(String[] args) {
-//		µÎ Á¤¼ö a, b°¡ ÁÖ¾îÁ³À» ¶§ a¿Í b »çÀÌ¿¡ ¼ÓÇÑ ¸ğµç Á¤¼öÀÇ ÇÕÀ» ¸®ÅÏÇÏ´Â ÇÔ¼ö, solutionÀ» ¿Ï¼ºÇÏ¼¼¿ä.
-//		¿¹¸¦µé¾î a = 3, b = 5ÀÎ °æ¿ì , 3 + 4 + 5 = 12 ÀÌ¹Ç·Î 12¸¦ ¸®ÅÏÇÑ´Ù.
-		
+//		ë‘ ì •ìˆ˜ a, bê°€ ì£¼ì–´ì¡Œì„ ë•Œ aì™€ b ì‚¬ì´ì— ì†í•œ ëª¨ë“  ì •ìˆ˜ì˜ í•©ì„ ë¦¬í„´í•˜ëŠ” í•¨ìˆ˜, solutionì„ ì™„ì„±í•˜ì„¸ìš”.
+//		ì˜ˆë¥¼ë“¤ì–´ a = 3, b = 5ì¸ ê²½ìš° , 3 + 4 + 5 = 12 ì´ë¯€ë¡œ 12ë¥¼ ë¦¬í„´í•œë‹¤.
 		
 		int a = 5; 
 		int b = 3;
@@ -17,7 +16,6 @@ public class HapBetweenTwoNumber {
 		long result = 0;
 		
 		int tmp = 0;
-		
 		
 		if(a > b) {
 			tmp = a;
@@ -30,8 +28,6 @@ public class HapBetweenTwoNumber {
 			result += i;
 		}	
 		
-		
-		System.out.println(result);
 		return result;
 	}
 	
