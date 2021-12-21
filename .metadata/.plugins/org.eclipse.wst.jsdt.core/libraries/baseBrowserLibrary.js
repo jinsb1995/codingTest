@@ -439,7 +439,7 @@ Document.prototype.importNode=function(importedNode, deep){return new Node();};
  */
 Document.prototype.createElementNS=function(namespaceURI, qualifiedName){return new HTMLElement();}; 
 /**
- * function createEvent(String eventType) 
+ * function createEvent(inflearn.String eventType)
  * http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/ecma-script-binding.html
  * 
  * @param {String} eventType
@@ -1166,7 +1166,7 @@ Element.prototype.tagName="";
  */
 Element.prototype.addEventListener=function(type, listener, useCapture){}; 
 /**
- * function attachEvent(String type, Function listener) 
+ * function attachEvent(inflearn.String type, Function listener)
  * http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/ecma-script-binding.html 
  * 
  * @param {String} type
@@ -1176,7 +1176,7 @@ Element.prototype.addEventListener=function(type, listener, useCapture){};
  */
 Element.prototype.attachEvent=function(type, listener){}; 
 /**
- * function detachEvent(String type, Function listener) 
+ * function detachEvent(inflearn.String type, Function listener)
  * http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/ecma-script-binding.html 
  * 
  * @param {String} type

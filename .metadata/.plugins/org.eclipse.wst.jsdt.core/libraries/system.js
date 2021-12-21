@@ -85,7 +85,7 @@ Object.prototype.propertyIsEnumerable = function(name){return true;};
 Object.prototype.constructor = new Function();
 
 /**
-  * Object String()
+  * Object inflearn.String()
   * @constructor
   * @extends Object
   * @since Standard ECMA-262 3rd. Edition

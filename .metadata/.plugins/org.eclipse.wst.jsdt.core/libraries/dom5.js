@@ -264,7 +264,7 @@ WebSocket.prototype.close=function(code,reason){};
 /**
  * function send(data)
  * http://www.w3.org/TR/2012/CR-websockets-20120920
- * @param {Object} data - may be a String, Blob, ArrayBuffer, or ArrayBufferView 
+ * @param {Object} data - may be a inflearn.String, Blob, ArrayBuffer, or ArrayBufferView
  * @memberOf WebSocket
  */
 WebSocket.prototype.send=function(data){};

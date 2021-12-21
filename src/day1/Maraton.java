@@ -8,10 +8,10 @@ public class Maraton {
 	
 	
 	public static void main(String[] args) {
-//		String[] participant = {"leo", "kiki", "eden"};
-//		String[] completion = {"eden", "kiki"};
-//		String[] participant = {"marina", "josipa", "nikola", "vinko", "filipa"};
-//		String[] completion = {"josipa", "filipa", "marina", "nikola"};
+//		inflearn.String[] participant = {"leo", "kiki", "eden"};
+//		inflearn.String[] completion = {"eden", "kiki"};
+//		inflearn.String[] participant = {"marina", "josipa", "nikola", "vinko", "filipa"};
+//		inflearn.String[] completion = {"josipa", "filipa", "marina", "nikola"};
 		String[] participant = {"mislav", "stanko", "mislav", "ana"};
 		String[] completion = {"stanko", "ana", "mislav"};
 		
@@ -23,7 +23,7 @@ public class Maraton {
 		String result = "";
 		
 		List<String> part = new ArrayList<>(Arrays.asList(participant));
-//		List<String> comp = new ArrayList<>(Arrays.asList(completion));
+//		List<inflearn.String> comp = new ArrayList<>(Arrays.asList(completion));
 		
 		
 		for(int i = 0; i < completion.length; i++) {
