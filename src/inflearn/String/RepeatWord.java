@@ -1,49 +1,57 @@
-package com.example.demo.util;
+package inflearn.String;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class RepeatWord {
-
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 
-		ValidClass valid = new ValidClass();
-		valid.setTextArr(sc.next());
-		sc.close();
-		String result = valid.checkRecursiveWord();
-		System.out.println(result);
-
+		try {
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			ValidClass vc = new ValidClass();
+			vc.setInput(br.readLine(), br);
+			br.close();
+			String result = vc.checkRecursiveWord();
+			System.out.println(result);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-
 
 }
 
 
 class ValidClass {
-	private char[] textArr;
+	private char[] input;
 
 	private boolean isTrue = true;
+
 	private String result;
 
-	public void setTextArr(String text) {
-		this.textArr = text.toLowerCase().toCharArray();
+	public void setInput(String text, BufferedReader br) throws IOException {
+		if (text.trim().length() > 100) {
+			System.out.println("공백을 제외한 100자까지만 입력이 가능합니다.");
+			text = br.readLine();
+			setInput(text, br);
+		}
+		this.input = text.toLowerCase().toCharArray();
 	}
 
-
 	public String checkRecursiveWord() {
-		for (int i = 0;  i < textArr.length; i++) {
-			if(textArr[i] != textArr[(textArr.length - 1) - i]) {
+
+		for (int i = 0; i < input.length; i++) {
+			if (input[i] != input[(input.length - 1) - i]) {
 				isTrue = false;
 				break;
 			}
 		}
-		if(isTrue) result = "YES";
+		if (isTrue) result = "YES";
 		else result = "NO";
 
 		return result;
 	}
 
-
-
-
 }
+
+
