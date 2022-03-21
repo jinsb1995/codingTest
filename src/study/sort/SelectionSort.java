@@ -12,44 +12,43 @@ package study.sort;
 public class SelectionSort {
 
     public static void selectionSort(int[] arr) {
-        // 제일 작은 값을 찾아야하는데 위치를 모르니까 일단 시작값은 0으로 준다.
+        // 배열에서 가장 작은 값을 찾아야 하는데 그 위치를 모르니까 0부터 시작한다.
         selectionSort(arr, 0);
     }
 
-    private static void selectionSort(int[] arr, int start) {
+    public static void selectionSort(int[] arr, int start) {
+        // 배열의 길이만큼만 재귀호출
         if (start < arr.length - 1) {
 
-            int minIdx = start;
+            // 최소값이 들어있는 index
+            int minIndex = start;
+
             for (int i = start; i < arr.length; i++) {
-                if (arr[i] < arr[minIdx])
-                    minIdx = i;
+                if (arr[minIndex] > arr[i]) {
+                    swap(arr, i, minIndex);
+                }
             }
-            swap(arr, start, minIdx);
-            selectionSort(arr, start + 1);
+            selectionSort(arr, start+1);
         }
-
     }
 
-    private static void swap(int[] arr, int start, int minIdx) {
-        int tmp = 0;
-        tmp = arr[start];
-        arr[start] = arr[minIdx];
-        arr[minIdx] = tmp;
-
+    public static void swap(int[] arr, int target, int minIndex) {
+        int tmp = arr[target];
+        arr[target] = arr[minIndex];
+        arr[minIndex] = tmp;
     }
 
-    private static void printArr(int[] arr) {
-        for (int i : arr) {
-            System.out.print(i + ", ");
+    public static void printArr(int[] arr) {
+        for (int data : arr) {
+            System.out.print(data + ", ");
         }
         System.out.println();
     }
 
     public static void main(String[] args) {
-        int[] arr = {3,5,4,2,1};
+        int[] arr = {5, 3, 4, 2, 1};
         printArr(arr);
         selectionSort(arr);
         printArr(arr);
-
     }
 }
