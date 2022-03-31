@@ -43,8 +43,8 @@
 
     Complete Binary Tree  ( 완전 이진 트리 )
 
-         - level이 맞고, 노드들이 level별로 왼쪽부터 채워져 있는 것
-
+        - 마지막 level을 제외한 모든 레벨이 채워져 있는 트리
+        - 마지막 level은 꼭 왼쪽부터 채워져야 한다.
 
     Full Binary Tree
 
