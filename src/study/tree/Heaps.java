@@ -51,6 +51,8 @@ public class Heaps {
         ht.insert(new HeapsNode(7));
         ht.insert(new HeapsNode(9));
         ht.insert(new HeapsNode(3));
+
+        ht.search();
     }
 }
 
@@ -78,6 +80,17 @@ class HeapsTree {
 
         nodes[idx] = node;
     }
+
+    public void search() {
+        int level = 2;
+        for (int i = 1; i < size; i++) {
+            System.out.print(nodes[i] + "\t");
+            if (i == level - 1) {
+                System.out.println();
+                level*=2;
+            }
+        }
+    }
 }
 
 
@@ -86,6 +99,14 @@ class HeapsNode {
 
     public HeapsNode(int data) {
         this.data = data;
+    }
+    public int getData() {
+        return this.data;
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(data);
     }
 }
 
