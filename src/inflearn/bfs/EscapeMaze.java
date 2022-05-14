@@ -6,14 +6,6 @@ import java.util.Scanner;
 
 public class EscapeMaze {
 
-    static class Point {
-        int x, y;
-        public Point(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
     static int[][] board, dis;
 
     static int[] dirX = {-1, 0, 1, 0};
@@ -25,18 +17,22 @@ public class EscapeMaze {
 
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
+        board = new int[8][8];
+        dis = new int[8][8];
 
-        board = new int[n+1][n+1];
-        dis = new int[n+1][n+1];
-
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
+        for (int i = 1; i <= 7; i++) {
+            for (int j = 1; j <= 7; j++) {
                 board[i][j] = sc.nextInt();
             }
         }
 
         bfs(1, 1);
+
+        if (board[7][7] == 0) {
+            System.out.println("-1");
+        } else {
+            System.out.println(dis[7][7]);
+        }
 
     }
 
@@ -45,8 +41,35 @@ public class EscapeMaze {
         q.offer(new Point(x, y));
 
         board[x][y] = 1;
-        
 
+        while (!q.isEmpty()) {
+
+            Point poll = q.poll();
+
+            for (int i = 0; i < dirX.length; i++) {
+
+                int nx = poll.x + dirX[i];
+                int ny = poll.y + dirY[i];
+
+                // nx, ny는 좌표니까 1 ~ 7사이 이어야 한다.
+                if (nx >= 1 && nx <= 7 && ny >= 1 && ny <= 7 && board[nx][ny] == 0) {
+                    board[nx][ny] = 1;
+                    q.offer(new Point(nx, ny));
+                    dis[nx][ny] = dis[poll.x][poll.y]+1;
+                }
+            }
+        }
     }
+
+
+
+    static class Point {
+        int x, y;
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
 
 }
