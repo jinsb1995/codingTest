@@ -2,7 +2,7 @@ package twopointers;
 
 import java.util.Scanner;
 
-public class ContinuesNumbers {
+public class ContinuousNumbers {
 
     public static Scanner sc = new Scanner(System.in);
 
@@ -15,22 +15,20 @@ public class ContinuesNumbers {
         createArray(arr);
 
 
-        int subHap = 0;
         int cnt = 0;
 
         for (int i = 0; i < arr.length; i++) {
-            int p1 = i;
-            
-            while(true) {
-                if (subHap > hap) {
+            int subHap = 0;
+
+            for (int j = i; j < arr.length; j++) {
+                if (subHap < hap) {
+                    subHap += arr[j];
+                } else {
                     break;
-                } else if (subHap != hap) {
-                    subHap += arr[p1++];
-                } else if (subHap == hap) {
-                    cnt++;
                 }
+
             }
-            
+            if (subHap == hap) cnt++;
         }
 
         System.out.println("cnt = " + cnt);
