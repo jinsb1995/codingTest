@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Anagram
+ * 두 문자열이 알파벳의 순서만 다르지만 구 구성이 일치하면 두 단어는 아나그램이라고 한다.
+ */
 public class Anagram {
 
     private static Scanner sc = new Scanner(System.in);
