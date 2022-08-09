@@ -1,4 +1,4 @@
-package bfsORdfs;
+package bfsdfs.dfs;
 
 import java.util.Scanner;
 

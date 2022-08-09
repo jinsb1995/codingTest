@@ -1,4 +1,4 @@
-package bfsORdfs;
+package bfsdfs.dfs;
 
 public class Factorial {
 

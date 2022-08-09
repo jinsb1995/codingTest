@@ -1,7 +1,12 @@
-package bfsORdfs;
+package bfsdfs.dfs;
 
 /**
  * 이진트리
+ *
+ * DFS (Depth-First Search)
+ *
+ * 깊이 우선 탐색
+ *
  *  전위순회 (preOrder)
  *
  *  중위순회 (inOrder)
